@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+.top {
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.par {
+  background-color: hsl(248, 32%, 49%);
+  margin: 0 auto;
+  width: 85%;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.med {
+  background-color: #fff;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  height: 455px;
+  margin-left: 27px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+input {
+  height: 45px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: hsl(154, 59%, 51%);
+  height: 50px;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+h5 {
+  font-size: 13px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  color: gray;
+  margin-top: 20px;
+}
+
+.our {
+  color: hsl(0, 100%, 74%);
+}
+
+button:hover {
+  background-color: #38cc8c;
+  opacity: 0.9;
+}
+button:active {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  margin-top: 10px;
+}
+
+.input-group input {
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.input-group .error-massege {
+  visibility: hidden;
+  color: red;
+  font-size: 12px;
+  position: relative;
+  left: 100px;
+  bottom: 9px;
+}
+
+.ig {
+  position: relative;
+  right: 36px;
+  bottom: 25px;
+}
+
+.ign {
+  position: relative;
+  bottom: 24px;
+  right: 34.5px;
+}
+
+/* error condition */
+
+.input-group.error input {
+  border: 2px solid red;
+}
+
+.input-group.error .error-massege {
+  visibility: visible;
+}
+
+.input-group .error-masseges {
+  visibility: hidden;
+  color: red;
+  font-size: 12px;
+  position: relative;
+  left: 128px;
+  bottom: 11px;
+}
+
+.input-group.error .error-masseges {
+  visibility: visible;
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+
+  .con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto; /* توسيط الصفحة في منتصف الشاشة تماماً */
+    /* padding: 0 20px; */
+    min-height: 100vh;
+  }
+  .top {
+    text-align: left;
+    margin-left: 28px;
+    margin-bottom: 15px;
+  }
+
+  .top h1,
+  .top h2 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .par {
+    height: auto;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .par br {
+    display: none;
+  }
+
+  .med {
+    margin-left: 45px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  }
+  .input-group .error-massege {
+    left: 230px;
+  }
+  .input-group .error-masseges {
+    left: 256px;
+  }
+}
