@@ -1,22 +1,22 @@
 let but = document.querySelector("button");
 let allInputs = document.querySelectorAll("input");
-let emailMassege = document.getElementById("lastName");
-
-function emailValid(email) {
-  let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
 
 but.addEventListener("click", function (event) {
   event.preventDefault();
 
+  let isError = false;
   allInputs.forEach(function (inp) {
     let inputGroup = inp.parentElement;
 
     if (inp.value.trim() === "") {
+      isError = true;
       inputGroup.classList.add("error");
     } else {
       inputGroup.classList.remove("error");
     }
   });
+
+  if (!isError) {
+    location.reload();
+  }
 });
